@@ -1,0 +1,61 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "price": 59.99,
+      "description": "High-quality wireless headphones with noise cancellation and 20-hour battery life.",
+      "image": "https://placehold.co/600x600/orange/white?text=Headphones",
+      "createdAt": "2025-04-05T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Smartphone Stand",
+      "price": 19.99,
+      "description": "Adjustable aluminum stand for smartphones and tablets, perfect for desk use.",
+      "image": "https://placehold.co/600x600/blue/white?text=Stand",
+      "createdAt": "2025-04-04T14:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Wireless Charging Pad",
+      "price": 29.99,
+      "description": "Fast 15W wireless charger compatible with all Qi-enabled devices.",
+      "image": "https://placehold.co/600x600/purple/white?text=Charger",
+      "createdAt": "2025-04-03T09:15:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Smart LED Bulb",
+      "price": 15.99,
+      "description": "RGB smart bulb controllable via smartphone app or voice commands.",
+      "image": "https://placehold.co/600x600/yellow/black?text=Bulb",
+      "createdAt": "2025-04-02T16:45:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Portable External SSD",
+      "price": 89.99,
+      "description": "500GB ultra-fast external SSD with USB-C connectivity for quick data transfers.",
+      "image": "https://placehold.co/600x600/gray/white?text=SSD",
+      "createdAt": "2025-04-01T11:20:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Fitness Tracker Watch",
+      "price": 79.99,
+      "description": "Water-resistant fitness tracker with heart rate monitoring and sleep tracking.",
+      "image": "https://placehold.co/600x600/green/white?text=Watch",
+      "createdAt": "2025-03-31T08:10:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Bluetooth Speaker",
+      "price": 49.99,
+      "description": "Waterproof portable speaker with 360° sound and 12-hour battery life.",
+      "image": "https://placehold.co/600x600/red/white?text=Speaker",
+      "createdAt": "2025-03-30T13:25:00.000Z"
+    }
+  ]
+}

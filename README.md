@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
 
-## Project info
+# BasketBliss E-commerce Mini Application
 
-**URL**: https://lovable.dev/projects/268400a1-dede-4e80-919d-53b3c137a7ad
+A mini e-commerce application that allows users to browse products, view product details, add products to cart, and manage their shopping cart.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Browse the 6 latest products on the homepage
+- View all products in the products page
+- Search for products
+- View detailed information about each product
+- Add new products to the database
+- Add products to your shopping cart
+- Manage quantities in your cart
+- Real-time cart total calculation
 
-**Use Lovable**
+## Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/268400a1-dede-4e80-919d-53b3c137a7ad) and start prompting.
+- React
+- TypeScript
+- React Router for navigation
+- React Query for data fetching
+- React Hook Form for form handling
+- Zod for form validation
+- Tailwind CSS for styling
+- Shadcn UI components
+- JSON Server for the backend API
 
-Changes made via Lovable will be committed automatically to this repo.
+## Setup Instructions
 
-**Use your preferred IDE**
+1. Clone this repository
+2. Install dependencies:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. Start the JSON Server (database):
 
-Follow these steps:
+```bash
+npx json-server --watch db.json --port 3000
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. In a new terminal, start the React application:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. Open [http://localhost:8080](http://localhost:8080) in your browser to view the application
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## API Endpoints
 
-**Use GitHub Codespaces**
+The application uses the following API endpoints:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `GET /products` - Get all products
+- `GET /products/:id` - Get a specific product by ID
+- `POST /products` - Add a new product
+- `PATCH /products/:id` - Update a product
+- `DELETE /products/:id` - Delete a product
 
-## What technologies are used for this project?
+## Screenshots
 
-This project is built with:
+[Screenshots would be added here]
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Future Enhancements
 
-## How can I deploy this project?
+- User authentication
+- Order history
+- Product categories
+- Payment processing
+- Admin dashboard
 
-Simply open [Lovable](https://lovable.dev/projects/268400a1-dede-4e80-919d-53b3c137a7ad) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
