@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "@/contexts/CartContext";
@@ -12,7 +11,7 @@ import {
   Minus,
   ShoppingBag
 } from "lucide-react";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "@/lib/toast";
 
 const CartPage: React.FC = () => {
   const { items, removeFromCart, updateQuantity, clearCart, totalPrice } = useCart();

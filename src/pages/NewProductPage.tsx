@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -17,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "@/lib/toast";
 
 const formSchema = z.object({
   name: z.string().min(3, "Product name must be at least 3 characters"),
@@ -48,6 +47,9 @@ const NewProductPage: React.FC = () => {
     mutationFn: (data: FormValues) => {
       const newProduct = {
         ...data,
+        name: data.name!,
+        price: data.price!,
+        description: data.description!,
         createdAt: new Date().toISOString(),
         image: data.image || "https://placehold.co/400x400?text=No+Image",
       };
