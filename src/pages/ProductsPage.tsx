@@ -46,7 +46,7 @@ const ProductsPage: React.FC = () => {
     <div className="container mx-auto px-4 py-8">
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-jumia-dark mb-6">
-          All Products
+          Tous les Produits
         </h1>
         
         <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -55,7 +55,7 @@ const ProductsPage: React.FC = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
             <Input
               type="search"
-              placeholder="Search products..."
+              placeholder="Rechercher des produits..."
               className="pl-10"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -67,13 +67,13 @@ const ProductsPage: React.FC = () => {
             <SlidersHorizontal size={18} className="text-gray-500" />
             <Select value={sortBy} onValueChange={setSortBy}>
               <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Sort by" />
+                <SelectValue placeholder="Trier par" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="newest">Newest First</SelectItem>
-                <SelectItem value="name">Name (A-Z)</SelectItem>
-                <SelectItem value="priceLow">Price (Low to High)</SelectItem>
-                <SelectItem value="priceHigh">Price (High to Low)</SelectItem>
+                <SelectItem value="newest">Plus récents</SelectItem>
+                <SelectItem value="name">Nom (A-Z)</SelectItem>
+                <SelectItem value="priceLow">Prix (croissant)</SelectItem>
+                <SelectItem value="priceHigh">Prix (décroissant)</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -86,26 +86,28 @@ const ProductsPage: React.FC = () => {
         </div>
       ) : error ? (
         <div className="text-center p-8 bg-red-50 rounded-lg">
-          <p className="text-red-500">Failed to load products. Please try again later.</p>
+          <p className="text-red-500">Échec du chargement des produits. Veuillez réessayer plus tard.</p>
           <Button 
             variant="outline" 
             className="mt-4"
             onClick={() => window.location.reload()}
           >
-            Retry
+            Réessayer
           </Button>
         </div>
       ) : !sortedProducts || sortedProducts.length === 0 ? (
         <div className="text-center p-8 bg-jumia-light rounded-lg">
           {searchTerm ? (
-            <p className="text-jumia-dark">No products match your search criteria.</p>
+            <p className="text-jumia-dark">Aucun produit ne correspond à votre recherche.</p>
           ) : (
-            <p className="text-jumia-dark">No products available yet. Add your first product!</p>
+            <p className="text-jumia-dark">Aucun produit disponible pour le moment. Ajoutez votre premier produit !</p>
           )}
         </div>
       ) : (
         <>
-          <p className="text-gray-500 mb-4">Showing {sortedProducts.length} product{sortedProducts.length !== 1 ? 's' : ''}</p>
+          <p className="text-gray-500 mb-4">
+            Affichage de {sortedProducts.length} produit{sortedProducts.length !== 1 ? 's' : ''}
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {sortedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />

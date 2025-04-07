@@ -15,15 +15,15 @@ const HomePage: React.FC = () => {
     <div className="container mx-auto px-4 py-8">
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-jumia-dark mb-2">
-          Welcome to BasketBliss
+          Bienvenue sur BasketBliss
         </h1>
         <p className="text-gray-600">
-          Discover our latest arrivals and add your favorites to cart!
+          Découvrez nos nouveautés et ajoutez vos favoris au panier !
         </p>
       </header>
 
       <h2 className="text-2xl font-bold text-jumia-dark border-b pb-2 mb-6">
-        Latest Products
+        Derniers Produits
       </h2>
 
       {isLoading ? (
@@ -32,11 +32,11 @@ const HomePage: React.FC = () => {
         </div>
       ) : error ? (
         <div className="text-center p-8 bg-red-50 rounded-lg">
-          <p className="text-red-500">Failed to load products. Please try again later.</p>
+          <p className="text-red-500">Échec du chargement des produits. Veuillez réessayer plus tard.</p>
         </div>
       ) : !latestProducts || latestProducts.length === 0 ? (
         <div className="text-center p-8 bg-jumia-light rounded-lg">
-          <p className="text-jumia-dark">No products available yet. Be the first to add one!</p>
+          <p className="text-jumia-dark">Aucun produit disponible pour le moment. Soyez le premier à en ajouter un !</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
